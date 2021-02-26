@@ -66,7 +66,7 @@ public class DriftCalculator : MonoBehaviour
         Debug.DrawLine(carRb.position, pointingPoint);
         //Debug.Log(moving.magnitude);
 
-        if (angle > 5.0f && angle < 90.0f)
+        if (angle > 10.0f && angle < 90.0f)
         {
             angleText.text = "Dorifto Angle: " + intAngle.ToString();
             if (moving.magnitude > 0.5f)
