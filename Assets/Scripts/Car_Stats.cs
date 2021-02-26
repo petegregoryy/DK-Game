@@ -6,38 +6,64 @@ using System.Collections;
 class Car_Stats : MonoBehaviour
 {
     //Car contoler:
+    [SerializeField]
     private float __inertiaFactor {get;} // Will be modified per car: DRIFT
+    [SerializeField]
     private float __throttleTime { get; } // ACCELERATION
+    [SerializeField] 
     private float __throttleTimeTraction { get; } //doenst seem to do anything that can be felt.
+    [SerializeField]
     private float __throttleRelaseTime { get; } //doenst seem to do anything that can be felt.
+    [SerializeField]
     private float __throttleReleaseTimeTraction { get; } //doenst seem to do anything that can be felt.
+    [SerializeField]
     private float __steerTime { get; } //doenst seem to do anything that can be felt.
+    [SerializeField]
     private float __veloSteerTime { get; } //handling?
+    [SerializeField] 
     private float __steerReleaseTime { get; } //doenst seem to do anything that can be felt.
+    [SerializeField] 
     private float __veloSteerReleaseTime { get; }
+    [SerializeField]
     private float __steerCorectionFactor { get; }//handling?
 
     //Drivetrain:
+    [SerializeField]
     private float __engineInertia { get; }//not sure. it does something.
+    [SerializeField]
     private float __engineRPMFriction { get; }//not sure. it does something.
+    [SerializeField] 
     private float __differentialLockCoefficient { get; }//not sure. it does something.
 
     //Car contoler:
+    [HideInInspector]
     public float _inertiaFactor; // Will be modified per car: DRIFT
+    [HideInInspector] 
     public float _throttleTime; // ACCELERATION
+    [HideInInspector]
     public float _throttleTimeTraction; //doenst seem to do anything that can be felt.
+    [HideInInspector] 
     public float _throttleRelaseTime; //doenst seem to do anything that can be felt.
+    [HideInInspector]
     public float _throttleReleaseTimeTraction; //doenst seem to do anything that can be felt.
+    [HideInInspector]
     public float _steerTime; //doenst seem to do anything that can be felt.
+    [HideInInspector]
     public float _veloSteerTime; //handling?
+    [HideInInspector] 
     public float _steerReleaseTime; //doenst seem to do anything that can be felt.
+    [HideInInspector]
     public float _veloSteerReleaseTime;
+    [HideInInspector]
     public float _steerCorectionFactor;//handling?
 
 
     //Drivetrain:
+    [HideInInspector] 
     public float _engineInertia;//not sure. it does something.
+    [HideInInspector] 
     public float _engineRPMFriction;//not sure. it does something.
+    [HideInInspector] 
     public float _differentialLockCoefficient;//not sure. it does something.
 
     public Car_Stats()
