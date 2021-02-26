@@ -55,7 +55,7 @@ class Car_Stats : MonoBehaviour
         _steerCorectionFactor = 4.0f;
 
         //Drivetrain:
-        _engineInertia = 0.6f;
+        _engineInertia = 0.3f;
         _engineRPMFriction = 0.2f;
         _differentialLockCoefficient = 0.1f;
 
@@ -72,7 +72,7 @@ class Car_Stats : MonoBehaviour
         __veloSteerReleaseTime = 0f;
         __steerCorectionFactor = 4.0f;
         //Drivetrain:
-        __engineInertia = 0.6f;
+        __engineInertia = 0.3f;
         __engineRPMFriction = 0.2f;
         __differentialLockCoefficient = 0.1f;
     }
