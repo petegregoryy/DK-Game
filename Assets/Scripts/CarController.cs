@@ -107,7 +107,7 @@ public class CarController : MonoBehaviour {
         drivetrain = GetComponent(typeof(Drivetrain)) as Drivetrain;
     }
 
-    void Update() {
+    void FixedUpdate() {
 
         // Steering
         Vector3 carDir = transform.forward;

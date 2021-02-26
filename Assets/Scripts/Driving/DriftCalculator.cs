@@ -103,6 +103,8 @@ public class DriftCalculator : MonoBehaviour
             scoreText.text = pointStore.Get_total_score().ToString().PadLeft(15, '0');
             tempScoreText.enabled = false;
             multText.enabled = false;
+            tempBack.enabled = false;
+            multBack.enabled = false;
         }
     }
 
