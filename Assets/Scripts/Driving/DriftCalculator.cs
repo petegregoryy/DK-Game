@@ -20,6 +20,14 @@ public class DriftCalculator : MonoBehaviour
     Text scoreText;
     [SerializeField]
     Text tempScoreText;
+    [SerializeField]
+    Image scoreBack;
+    [SerializeField]
+    Image tempBack;
+    [SerializeField]
+    Image multBack;
+
+
 
     float driftTimer = 0;
     float score = 0;
@@ -77,6 +85,8 @@ public class DriftCalculator : MonoBehaviour
             scoreText.text = pointStore.Get_total_score().ToString().PadLeft(15, '0');
             tempScoreText.enabled = false;
             multText.enabled = false;
+            tempBack.enabled = false;
+            multBack.enabled = false;
         }
         else
         {
@@ -93,6 +103,8 @@ public class DriftCalculator : MonoBehaviour
             scoreText.text = pointStore.Get_total_score().ToString().PadLeft(15, '0');
             tempScoreText.enabled = false;
             multText.enabled = false;
+            tempBack.enabled = false;
+            multBack.enabled = false;
         }
     }
 
@@ -111,6 +123,8 @@ public class DriftCalculator : MonoBehaviour
         multText.text = "x " + pointStore.Get_drifting_multiplier().ToString().PadLeft(2,'0');
         tempScoreText.enabled = true;
         multText.enabled = true;
+        tempBack.enabled = true;
+        multBack.enabled = true;
     }
 
 
