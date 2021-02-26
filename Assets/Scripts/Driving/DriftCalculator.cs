@@ -26,7 +26,8 @@ public class DriftCalculator : MonoBehaviour
     Image tempBack;
     [SerializeField]
     Image multBack;
-
+    [SerializeField]
+    Image driftIndicatorNeedle;
 
 
     float driftTimer = 0;
@@ -55,6 +56,9 @@ public class DriftCalculator : MonoBehaviour
         float angle = Vector3.Angle(pointing, moving);
         int intAngle = (int)angle;
 
+        Quaternion driftRotation = Quaternion.Euler(0, 0, intAngle);
+        driftIndicatorNeedle.transform.rotation = driftRotation;
+    
         Vector3 movingPoint = carRb.position + (moving * (moving.magnitude));
         Vector3 pointingPoint = carRb.position + (pointing * 50);
 

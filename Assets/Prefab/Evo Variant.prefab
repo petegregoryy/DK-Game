@@ -108,6 +108,16 @@ PrefabInstance:
       propertyPath: scoreBack
       value: 
       objectReference: {fileID: 8320260382274378334}
+    - target: {fileID: 2745630123069484234, guid: f37279b6aca2c4b4a9f39426b1ab7517,
+        type: 3}
+      propertyPath: driftIndicatorNeedle
+      value: 
+      objectReference: {fileID: 5525265970089348280}
+    - target: {fileID: 8273367721150388474, guid: f37279b6aca2c4b4a9f39426b1ab7517,
+        type: 3}
+      propertyPath: m_Name
+      value: DriftIndicatorNeedle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f37279b6aca2c4b4a9f39426b1ab7517, type: 3}
 --- !u!114 &8320260382274378334 stripped
@@ -137,6 +147,18 @@ MonoBehaviour:
 --- !u!114 &387096475888169775 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4063348864675814005, guid: f37279b6aca2c4b4a9f39426b1ab7517,
+    type: 3}
+  m_PrefabInstance: {fileID: 4412635321785887066}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &5525265970089348280 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8183432301306799586, guid: f37279b6aca2c4b4a9f39426b1ab7517,
     type: 3}
   m_PrefabInstance: {fileID: 4412635321785887066}
   m_PrefabAsset: {fileID: 0}
