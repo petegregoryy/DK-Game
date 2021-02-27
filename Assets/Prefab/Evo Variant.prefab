@@ -48,6 +48,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1247400644044101619, guid: f37279b6aca2c4b4a9f39426b1ab7517,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 4.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1247400644044101619, guid: f37279b6aca2c4b4a9f39426b1ab7517,
+        type: 3}
+      propertyPath: m_Center.z
+      value: -0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 1247400644538916576, guid: f37279b6aca2c4b4a9f39426b1ab7517,
         type: 3}
       propertyPath: m_Name
@@ -148,7 +158,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: DriftIndicatorNeedle
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1247400644577551112, guid: f37279b6aca2c4b4a9f39426b1ab7517, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: f37279b6aca2c4b4a9f39426b1ab7517, type: 3}
 --- !u!114 &8320260382274378334 stripped
 MonoBehaviour:
