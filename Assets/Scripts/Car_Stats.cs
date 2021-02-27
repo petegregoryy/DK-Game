@@ -10,7 +10,11 @@ class Car_Stats : MonoBehaviour
     private float __inertiaFactor {get;} // Will be modified per car: DRIFT
     [SerializeField]
     private float __throttleTime { get; } // ACCELERATION
+<<<<<<< HEAD
     [SerializeField]
+=======
+    [SerializeField] 
+>>>>>>> cb25de2f5828a005e38b82185b2777abfcfdbcd8
     private float __throttleTimeTraction { get; } //doenst seem to do anything that can be felt.
     [SerializeField]
     private float __throttleRelaseTime { get; } //doenst seem to do anything that can be felt.
@@ -20,9 +24,15 @@ class Car_Stats : MonoBehaviour
     private float __steerTime { get; } //doenst seem to do anything that can be felt.
     [SerializeField]
     private float __veloSteerTime { get; } //handling?
+<<<<<<< HEAD
     [SerializeField]
     private float __steerReleaseTime { get; } //doenst seem to do anything that can be felt.
     [SerializeField]
+=======
+    [SerializeField] 
+    private float __steerReleaseTime { get; } //doenst seem to do anything that can be felt.
+    [SerializeField] 
+>>>>>>> cb25de2f5828a005e38b82185b2777abfcfdbcd8
     private float __veloSteerReleaseTime { get; }
     [SerializeField]
     private float __steerCorectionFactor { get; }//handling?
@@ -32,17 +42,29 @@ class Car_Stats : MonoBehaviour
     private float __engineInertia { get; }//not sure. it does something.
     [SerializeField]
     private float __engineRPMFriction { get; }//not sure. it does something.
+<<<<<<< HEAD
     [SerializeField]
+=======
+    [SerializeField] 
+>>>>>>> cb25de2f5828a005e38b82185b2777abfcfdbcd8
     private float __differentialLockCoefficient { get; }//not sure. it does something.
 
     //Car contoler:
     [HideInInspector]
     public float _inertiaFactor; // Will be modified per car: DRIFT
+<<<<<<< HEAD
     [HideInInspector]
     public float _throttleTime; // ACCELERATION
     [HideInInspector]
     public float _throttleTimeTraction; //doenst seem to do anything that can be felt.
     [HideInInspector]
+=======
+    [HideInInspector] 
+    public float _throttleTime; // ACCELERATION
+    [HideInInspector]
+    public float _throttleTimeTraction; //doenst seem to do anything that can be felt.
+    [HideInInspector] 
+>>>>>>> cb25de2f5828a005e38b82185b2777abfcfdbcd8
     public float _throttleRelaseTime; //doenst seem to do anything that can be felt.
     [HideInInspector]
     public float _throttleReleaseTimeTraction; //doenst seem to do anything that can be felt.
@@ -50,7 +72,11 @@ class Car_Stats : MonoBehaviour
     public float _steerTime; //doenst seem to do anything that can be felt.
     [HideInInspector]
     public float _veloSteerTime; //handling?
+<<<<<<< HEAD
     [HideInInspector]
+=======
+    [HideInInspector] 
+>>>>>>> cb25de2f5828a005e38b82185b2777abfcfdbcd8
     public float _steerReleaseTime; //doenst seem to do anything that can be felt.
     [HideInInspector]
     public float _veloSteerReleaseTime;
@@ -59,11 +85,19 @@ class Car_Stats : MonoBehaviour
 
 
     //Drivetrain:
+<<<<<<< HEAD
     [HideInInspector]
     public float _engineInertia;//not sure. it does something.
     [HideInInspector]
     public float _engineRPMFriction;//not sure. it does something.
     [HideInInspector]
+=======
+    [HideInInspector] 
+    public float _engineInertia;//not sure. it does something.
+    [HideInInspector] 
+    public float _engineRPMFriction;//not sure. it does something.
+    [HideInInspector] 
+>>>>>>> cb25de2f5828a005e38b82185b2777abfcfdbcd8
     public float _differentialLockCoefficient;//not sure. it does something.
 
     public Car_Stats()
