@@ -22,6 +22,7 @@ public class CarController : MonoBehaviour {
     // A higher inertia makes the car change direction slower, which can make it easier to respond to.
     public float inertiaFactor = 1.5f;
 
+
     // current input state
     [HideInInspector]
     public float brake;
