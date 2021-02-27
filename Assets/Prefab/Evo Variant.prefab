@@ -1,5 +1,30 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1930588298526985873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3203040326603936126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08a6bc797bdc7a840b09fc4dca23e836, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _inertiaFactor: 1.5
+  _throttleTime: 1
+  _throttleTimeTraction: 10
+  _throttleRelaseTime: 0.5
+  _throttleReleaseTimeTraction: 0.1
+  _steerTime: 1.2
+  _veloSteerTime: 0.1
+  _steerReleaseTime: 0.6
+  _veloSteerReleaseTime: 0
+  _steerCorectionFactor: 4
+  _engineInertia: 0.3
+  _engineRPMFriction: 0.2
+  _differentialLockCoefficient: 0.1
 --- !u!1001 &4412635321785887066
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -173,3 +198,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &3203040326603936126 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1247400643796744228, guid: f37279b6aca2c4b4a9f39426b1ab7517,
+    type: 3}
+  m_PrefabInstance: {fileID: 4412635321785887066}
+  m_PrefabAsset: {fileID: 0}
