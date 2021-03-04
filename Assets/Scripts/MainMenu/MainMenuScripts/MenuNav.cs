@@ -20,7 +20,7 @@ public class MenuNav : MonoBehaviour
         if (menuName == "Play")
         {
             // Load game scene
-            SceneManager.LoadScene("Map2");
+            SceneManager.LoadScene("Tokyo_BlockOut_V2");
             return;
         }
 

@@ -76,6 +76,11 @@ public class Drivetrain : MonoBehaviour
     [SerializeField]
     Text RPMText;
 
+    [SerializeField]
+    SetUnderlyingCarStats underStat;
+
+
+
     // Calculate engine torque for current rpm and throttle values.
     float CalcEngineTorque()
     {

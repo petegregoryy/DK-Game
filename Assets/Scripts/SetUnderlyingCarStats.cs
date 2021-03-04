@@ -22,7 +22,6 @@ public class SetUnderlyingCarStats : MonoBehaviour
     public float differentialLockCoefficient = 0.1f;//not sure. it does something.
 
 
-
     // Start is called before the first frame update
     void Start()
     {
