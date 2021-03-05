@@ -147,6 +147,12 @@ class Car_Stats : MonoBehaviour
         __differentialLockCoefficient = differentialLockCoefficient;
     }
 
+    void SetStatsFromFile()//Because the thing is whiny, it needs to be used itemofcarstats.SetStatsFromFile(carIdentifier);
+    {
+
+
+    }
+
     void returnStatsToNormal()
     {
         //car controler:
