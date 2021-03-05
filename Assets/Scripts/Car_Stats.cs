@@ -32,11 +32,11 @@ class Car_Stats : MonoBehaviour
 
     //Drivetrain:
     [SerializeField]
-    private float __engineInertia { get; }//not sure. it does something.
+    private float __engineInertia { get; set; }//not sure. it does something.
     [SerializeField]
-    private float __engineRPMFriction { get; }//not sure. it does something.
+    private float __engineRPMFriction { get; set; }//not sure. it does something.
     [SerializeField]
-    private float __differentialLockCoefficient { get; }//not sure. it does something.
+    private float __differentialLockCoefficient { get; set; }//not sure. it does something.
 
     //Car contoler:
     [HideInInspector]
@@ -108,10 +108,10 @@ class Car_Stats : MonoBehaviour
         __engineRPMFriction = 0.2f;
         __differentialLockCoefficient = 0.1f;
     }
-    public Car_Stats(float inertiaFactor, float throttleTime, float throttleTimeTraction, 
-                float throttleRelaseTime, float throttleReleaseTimeTraction, float steerTime, 
-                float veloSteerTime, float steerReleaseTime,float veloSteerReleaseTime, 
-                float steerCorectionFactor, float engineInertia, float engineRPMFriction, 
+    public Car_Stats(float inertiaFactor, float throttleTime, float throttleTimeTraction,
+                float throttleRelaseTime, float throttleReleaseTimeTraction, float steerTime,
+                float veloSteerTime, float steerReleaseTime, float veloSteerReleaseTime,
+                float steerCorectionFactor, float engineInertia, float engineRPMFriction,
                 float differentialLockCoefficient)
     {
         //car controler:
@@ -178,7 +178,6 @@ class Car_Stats : MonoBehaviour
                 __engineInertia = float.Parse(car.Attributes["engineInertia"].Value);
                 __engineRPMFriction = float.Parse(car.Attributes["engineRPMFriction"].Value);
                 __differentialLockCoefficient = float.Parse(car.Attributes["differentialLockCoefficient"].Value);
-
 
                 this.returnStatsToNormal();//sets the stats of single-underscore variables for us
 
