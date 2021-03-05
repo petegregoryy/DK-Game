@@ -29,6 +29,9 @@ public class DriftCalculator : MonoBehaviour
     [SerializeField]
     Image driftIndicatorNeedle;
 
+    [SerializeField]
+    ParticleSystem[] wheelParticles;
+
 
     float driftTimer = 0;
     float score = 0;
@@ -42,6 +45,10 @@ public class DriftCalculator : MonoBehaviour
     {
         tempScoreText.enabled = false;
         multText.enabled = false;
+        foreach (ParticleSystem partSys in wheelParticles)
+        {
+            partSys.Stop();
+        }
     }
 
     // Update is called once per frame
@@ -69,10 +76,18 @@ public class DriftCalculator : MonoBehaviour
         if (angle > 10.0f && angle < 90.0f)
         {
             angleText.text = "Dorifto Angle: " + intAngle.ToString();
-            if (moving.magnitude > 0.5f)
+            if (moving.magnitude > 1)
             {
                 AddScore(intAngle);
+                
                 //DriftController();
+            }
+            foreach (ParticleSystem partSys in wheelParticles)
+            {
+                if (partSys.isPaused)
+                {
+                    partSys.Play();
+                }
             }
         }
         else if(angle > 90.0f)
@@ -94,6 +109,10 @@ public class DriftCalculator : MonoBehaviour
         }
         else
         {
+            foreach (ParticleSystem partSys in wheelParticles)
+            {
+                partSys.Pause();
+            }
             pointStore.BANK_POINTS();
             angleText.text = "Dorifto Angle: Straight";
             //score += tempScore * multiplier;
@@ -154,5 +173,11 @@ public class DriftCalculator : MonoBehaviour
         {
             carRb.AddTorque(transform.up * torque * turn);
         }
+    }
+
+    void Cloudtoggle()
+    {
+        if (wheelParticles[0].isStopped)
+            wheelParticles[0].Play();
     }
 }
