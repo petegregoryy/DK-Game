@@ -314,6 +314,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5569359295747956625, guid: dd79b3c67d0967e4ea4c88f55f1b10c3,
+        type: 3}
+      propertyPath: inertiaFactor
+      value: 1.59
+      objectReference: {fileID: 0}
     - target: {fileID: 5569359296222689640, guid: dd79b3c67d0967e4ea4c88f55f1b10c3,
         type: 3}
       propertyPath: m_Name
