@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
+using System.Text;
+using System.Xml;
 
 class Car_Stats : MonoBehaviour
 {
@@ -147,10 +149,25 @@ class Car_Stats : MonoBehaviour
         __differentialLockCoefficient = differentialLockCoefficient;
     }
 
-    void SetStatsFromFile()//Because the thing is whiny, it needs to be used itemofcarstats.SetStatsFromFile(carIdentifier);
+    void SetStatsFromFile(string carIdentifier)//Because the thing is whiny, it needs to be used itemofcarstats.SetStatsFromFile(carIdentifier);
     {
+        //load xml file
+        XmlDocument listOfCars = new XmlDocument();
+        listOfCars.Load("carstatfile.xml");
+        foreach (XmlNode car in listOfCars)
+        {
+            //find car
+            if (car.Attributes["name"].Value == carIdentifier)
+            {
 
 
+                //set double-underscore variables to stats of the file
+
+
+                this.returnStatsToNormal();//sets the stats of single-underscore variables for us
+
+            }
+        }
     }
 
     void returnStatsToNormal()
