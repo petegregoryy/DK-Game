@@ -489,7 +489,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5569359295509508213}
-  m_Material: {fileID: 13400000, guid: e95d57b816a6f45fdaddc8d74081481e, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -609,7 +609,6 @@ GameObject:
   - component: {fileID: 5569359295747956629}
   - component: {fileID: 5569359295747956630}
   - component: {fileID: 5569359296723834361}
-  - component: {fileID: 488615078746237413}
   m_Layer: 0
   m_Name: Vehicle
   m_TagString: Untagged
@@ -718,6 +717,7 @@ MonoBehaviour:
   slipRatio: 0
   needle: {fileID: 5569359296145045901}
   RPMText: {fileID: 5569359296504048463}
+  underStat: {fileID: 0}
 --- !u!114 &5569359295747956625
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -848,31 +848,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _value: 0
---- !u!114 &488615078746237413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5569359295747956652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8d5359af5e840e40b736ba37e6425c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inertiaFactor: 1
-  throttleTime: 1
-  throttleTimeTraction: 10
-  throttleRelaseTime: 0.5
-  throttleReleaseTimeTraction: 0.1
-  steerTime: 1.2
-  veloSteerTime: 0.1
-  steerReleaseTime: 0.5
-  veloSteerReleaseTime: 0.01
-  steerCorectionFactor: 5
-  engineInertia: 0.4
-  engineRPMFriction: 0.2
-  differentialLockCoefficient: 0.1
 --- !u!1 &5569359295773443552
 GameObject:
   m_ObjectHideFlags: 0
@@ -1109,7 +1084,6 @@ GameObject:
   - component: {fileID: 5569359296043009154}
   - component: {fileID: 5569359296043009180}
   - component: {fileID: 5569359296043009181}
-  - component: {fileID: 5569359296043009152}
   - component: {fileID: 5569359296043009155}
   m_Layer: 0
   m_Name: Main Camera
@@ -1192,25 +1166,6 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5569359296043009182}
   m_Enabled: 1
---- !u!114 &5569359296043009152
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5569359296043009182}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b811522669f9faa40b2e3536fc671974, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 5569359296793707615}
-  distance: 1.6
-  height: 0.4
-  damping: 0.7
-  smoothRotation: 1
-  followBehind: 1
-  rotationDamping: 50
 --- !u!114 &5569359296043009155
 MonoBehaviour:
   m_ObjectHideFlags: 0

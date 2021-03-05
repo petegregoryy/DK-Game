@@ -75,7 +75,6 @@
     <Compile Include="Assets\Scripts\ExtensionMethods.cs" />
     <Compile Include="Assets\Scripts\MainMenu\GarageScripts\CarSelection.cs" />
     <Compile Include="Assets\Scripts\MainMenu\MainMenuScripts\MenuNav.cs" />
-    <Compile Include="Assets\Scripts\SetUnderlyingCarStats.cs" />
     <Compile Include="Assets\Scripts\Skidmarks.cs" />
     <Compile Include="Assets\Scripts\SoundController.cs" />
     <Compile Include="Assets\Scripts\TractionHelper.cs" />

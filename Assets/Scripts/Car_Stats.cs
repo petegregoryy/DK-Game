@@ -7,25 +7,25 @@ class Car_Stats : MonoBehaviour
 {
     //Car contoler:
     [SerializeField]
-    private float __inertiaFactor {get;} // Will be modified per car: DRIFT
+    private float __inertiaFactor { get; set; } // Will be modified per car: DRIFT
     [SerializeField]
-    private float __throttleTime { get; } // ACCELERATION
+    private float __throttleTime { get; set; } // ACCELERATION
     [SerializeField]
-    private float __throttleTimeTraction { get; } //doenst seem to do anything that can be felt.
+    private float __throttleTimeTraction { get; set; } //doenst seem to do anything that can be felt.
     [SerializeField]
-    private float __throttleRelaseTime { get; } //doenst seem to do anything that can be felt.
+    private float __throttleRelaseTime { get; set; } //doenst seem to do anything that can be felt.
     [SerializeField]
-    private float __throttleReleaseTimeTraction { get; } //doenst seem to do anything that can be felt.
+    private float __throttleReleaseTimeTraction { get; set; } //doenst seem to do anything that can be felt.
     [SerializeField]
-    private float __steerTime { get; } //doenst seem to do anything that can be felt.
+    private float __steerTime { get; set; } //doenst seem to do anything that can be felt.
     [SerializeField]
-    private float __veloSteerTime { get; } //handling?
+    private float __veloSteerTime { get; set; } //handling?
     [SerializeField]
-    private float __steerReleaseTime { get; } //doenst seem to do anything that can be felt.
+    private float __steerReleaseTime { get; set; } //doenst seem to do anything that can be felt.
     [SerializeField]
-    private float __veloSteerReleaseTime { get; }
+    private float __veloSteerReleaseTime { get; set; }
     [SerializeField]
-    private float __steerCorectionFactor { get; }//handling?
+    private float __steerCorectionFactor { get; set; }//handling?
 
     //Drivetrain:
     [SerializeField]
@@ -145,6 +145,12 @@ class Car_Stats : MonoBehaviour
         __engineInertia = engineInertia;
         __engineRPMFriction = engineRPMFriction;
         __differentialLockCoefficient = differentialLockCoefficient;
+    }
+
+    void SetStatsFromFile()//Because the thing is whiny, it needs to be used itemofcarstats.SetStatsFromFile(carIdentifier);
+    {
+
+
     }
 
     void returnStatsToNormal()
