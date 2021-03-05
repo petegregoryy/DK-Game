@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Collections;
 using System.Text;
 using System.Xml;
+using System.IO;
 
 class Car_Stats : MonoBehaviour
 {
@@ -160,8 +161,23 @@ class Car_Stats : MonoBehaviour
             if (car.Attributes["name"].Value == carIdentifier)
             {
 
-
                 //set double-underscore variables to stats of the file
+
+                //car controler:
+                __inertiaFactor = float.Parse(car.Attributes["inertiaFactor"].Value);
+                __throttleTime = float.Parse(car.Attributes["throttleTime"].Value);
+                __throttleTimeTraction = float.Parse(car.Attributes["throttleTimeTraction"].Value);
+                __throttleRelaseTime = float.Parse(car.Attributes["throttleRelaseTime"].Value);
+                __throttleReleaseTimeTraction = float.Parse(car.Attributes["throttleReleaseTimeTraction"].Value);
+                __steerTime = float.Parse(car.Attributes["steerTime"].Value);
+                __veloSteerTime = float.Parse(car.Attributes["veloSteerTime"].Value);
+                __steerReleaseTime = float.Parse(car.Attributes["steerReleaseTime"].Value);
+                __veloSteerReleaseTime = float.Parse(car.Attributes["veloSteerReleaseTime"].Value);
+                __steerCorectionFactor = float.Parse(car.Attributes["steerCorectionFactor"].Value);
+                //Drivetrain:
+                __engineInertia = float.Parse(car.Attributes["engineInertia"].Value);
+                __engineRPMFriction = float.Parse(car.Attributes["engineRPMFriction"].Value);
+                __differentialLockCoefficient = float.Parse(car.Attributes["differentialLockCoefficient"].Value);
 
 
                 this.returnStatsToNormal();//sets the stats of single-underscore variables for us
