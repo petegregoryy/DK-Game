@@ -76,8 +76,8 @@ public class Drivetrain : MonoBehaviour
     [SerializeField]
     Text RPMText;
 
-    [SerializeField]
-    SetUnderlyingCarStats underStat;
+    //[SerializeField]
+   // SetUnderlyingCarStats underStat;
 
 
 
