@@ -147,12 +147,10 @@ class Car_Stats : MonoBehaviour
         __differentialLockCoefficient = differentialLockCoefficient;
     }
 
-    Car_Stats GetStatsFromFile()
+    void SetStatsFromFile()
     {
-        Car_Stats newCarStats;
 
 
-        return newCarStats;
     }
 
     void returnStatsToNormal()
