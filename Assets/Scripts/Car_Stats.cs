@@ -150,7 +150,7 @@ class Car_Stats : MonoBehaviour
         __differentialLockCoefficient = differentialLockCoefficient;
     }
 
-    void SetStatsFromFile(string carIdentifier)//Because the thing is whiny, it needs to be used itemofcarstats.SetStatsFromFile(carIdentifier);
+    public void SetStatsFromFile(string carIdentifier)//Because the thing is whiny, it needs to be used itemofcarstats.SetStatsFromFile(carIdentifier);
     {
         //load xml file
         XmlDocument listOfCars = new XmlDocument();
@@ -185,7 +185,7 @@ class Car_Stats : MonoBehaviour
         }
     }
 
-    void returnStatsToNormal()
+    public void returnStatsToNormal()
     {
         //car controler:
         _inertiaFactor = __inertiaFactor;
