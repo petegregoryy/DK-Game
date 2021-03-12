@@ -6,8 +6,7 @@ using System.Collections;
 [RequireComponent(typeof(Drivetrain))]
 public class CarController : MonoBehaviour {
 
-    //Car_Stats stats = new Car_Stats();
-    //stats.SetStatsFromFile("Default");
+    public Car_Stats stats = new Car_Stats("Default");
 
     // Add all wheels of the car here, so brake and steering forces can be applied to them.
     public Wheel[] wheels;
@@ -22,7 +21,7 @@ public class CarController : MonoBehaviour {
     // Unity calculates the inertia tensor based on the car's collider shape.
     // This factor lets you scale the tensor, in order to make the car more or less dynamic.
     // A higher inertia makes the car change direction slower, which can make it easier to respond to.
-    public float inertiaFactor = 1.5f;
+    public float inertiaFactor = 1.5f;//stats._inertiaFactor;
 
 
     // current input state
