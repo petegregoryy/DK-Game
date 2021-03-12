@@ -4,8 +4,8 @@ using System.Collections;
 
 // This class is repsonsible for controlling inputs to the car.
 [RequireComponent(typeof(Drivetrain))]
-public class CarController : MonoBehaviour {
-
+public class CarController : MonoBehaviour
+{
     public Car_Stats stats = new Car_Stats("Default");
 
     // Add all wheels of the car here, so brake and steering forces can be applied to them.
@@ -21,7 +21,7 @@ public class CarController : MonoBehaviour {
     // Unity calculates the inertia tensor based on the car's collider shape.
     // This factor lets you scale the tensor, in order to make the car more or less dynamic.
     // A higher inertia makes the car change direction slower, which can make it easier to respond to.
-    public float inertiaFactor = 1.5f;//stats._inertiaFactor;
+    public float inertiaFactor = 1.5f;
 
 
     // current input state
@@ -101,15 +101,49 @@ public class CarController : MonoBehaviour {
     }
 
     // Initialize
-    void Start() {
+    void Start()
+    {
+        //****************************
+        stats = new Car_Stats("Default");
+        
+        inertiaFactor = stats._inertiaFactor;
+        throttleTime = stats._throttleTime;
+        throttleReleaseTimeTraction = stats._throttleTimeTraction;
+        throttleReleaseTime = stats._throttleRelaseTime;
+        throttleReleaseTimeTraction = stats._throttleReleaseTimeTraction;
+        steerTime = stats._steerTime;
+        veloSteerTime = stats._veloSteerTime;
+        steerReleaseTime = stats._steerReleaseTime;
+        veloSteerReleaseTime = stats._veloSteerReleaseTime;
+        steerCorrectionFactor = stats._steerCorectionFactor;
+        //****************************/
+        //Debug.Log(inertiaFactor);
+        //Debug.Log(stats._inertiaFactor);
+
         if (centerOfMass != null)
             GetComponent<Rigidbody>().centerOfMass = centerOfMass.localPosition;
 
         GetComponent<Rigidbody>().inertiaTensor *= inertiaFactor;
         drivetrain = GetComponent(typeof(Drivetrain)) as Drivetrain;
+        
     }
 
-    void FixedUpdate() {
+    void FixedUpdate()
+    {
+        //****************************
+        stats = new Car_Stats("Default");
+
+        inertiaFactor = stats._inertiaFactor;
+        throttleTime = stats._throttleTime;
+        throttleReleaseTimeTraction = stats._throttleTimeTraction;
+        throttleReleaseTime = stats._throttleRelaseTime;
+        throttleReleaseTimeTraction = stats._throttleReleaseTimeTraction;
+        steerTime = stats._steerTime;
+        veloSteerTime = stats._veloSteerTime;
+        steerReleaseTime = stats._steerReleaseTime;
+        veloSteerReleaseTime = stats._veloSteerReleaseTime;
+        steerCorrectionFactor = stats._steerCorectionFactor;
+        //****************************/
 
         // Steering
         Vector3 carDir = transform.forward;
@@ -126,14 +160,17 @@ public class CarController : MonoBehaviour {
         if (Input.GetKey(KeyCode.RightArrow))
             steerInput = 1;
 
-        if (steerInput < steering) {
+        if (steerInput < steering)
+        {
             float steerSpeed = (steering > 0) ? (1 / (steerReleaseTime + veloSteerReleaseTime * fVelo)) : (1 / (steerTime + veloSteerTime * fVelo));
             if (steering > optimalSteering)
                 steerSpeed *= 1 + (steering - optimalSteering) * steerCorrectionFactor;
             steering -= steerSpeed * Time.deltaTime;
             if (steerInput > steering)
                 steering = steerInput;
-        } else if (steerInput > steering) {
+        }
+        else if (steerInput > steering)
+        {
             float steerSpeed = (steering < 0) ? (1 / (steerReleaseTime + veloSteerReleaseTime * fVelo)) : (1 / (steerTime + veloSteerTime * fVelo));
             if (steering < optimalSteering)
                 steerSpeed *= 1 + (optimalSteering - steering) * steerCorrectionFactor;
@@ -146,15 +183,19 @@ public class CarController : MonoBehaviour {
         bool accelKey = Input.GetKey(KeyCode.UpArrow);
         bool brakeKey = Input.GetKey(KeyCode.DownArrow);
 
-        if (drivetrain.automatic && drivetrain.gear == 0) {
+        if (drivetrain.automatic && drivetrain.gear == 0)
+        {
             accelKey = Input.GetKey(KeyCode.DownArrow);
             brakeKey = Input.GetKey(KeyCode.UpArrow);
         }
 
-        if (Input.GetKey(KeyCode.LeftShift)) {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
             throttle += Time.deltaTime / throttleTime;
             throttleInput += Time.deltaTime / throttleTime;
-        } else if (accelKey) {
+        }
+        else if (accelKey)
+        {
 
             if (drivetrain.slipRatio < 0.10f)
                 throttle += Time.deltaTime / throttleTime;
@@ -166,7 +207,9 @@ public class CarController : MonoBehaviour {
             if (throttleInput < 0)
                 throttleInput = 0;
             throttleInput += Time.deltaTime / throttleTime;
-        } else {
+        }
+        else
+        {
             if (drivetrain.slipRatio < 0.2f)
                 throttle -= Time.deltaTime / throttleReleaseTime;
             else
@@ -175,14 +218,17 @@ public class CarController : MonoBehaviour {
 
         throttle = Mathf.Clamp01(throttle);
 
-        if (brakeKey) {
+        if (brakeKey)
+        {
             if (drivetrain.slipRatio < 0.2f)
                 brake += Time.deltaTime / throttleTime;
             else
                 brake += Time.deltaTime / throttleTimeTraction;
             throttle = 0;
             throttleInput -= Time.deltaTime / throttleTime;
-        } else {
+        }
+        else
+        {
             if (drivetrain.slipRatio < 0.2f)
                 brake -= Time.deltaTime / throttleReleaseTime;
             else
@@ -198,10 +244,11 @@ public class CarController : MonoBehaviour {
         // Gear shifting
         float shiftThrottleFactor = Mathf.Clamp01((Time.time - lastShiftTime) / shiftSpeed);
 
-        if (drivetrain.gear == 0 && Input.GetKey(KeyCode.UpArrow)) {
+        if (drivetrain.gear == 0 && Input.GetKey(KeyCode.UpArrow))
+        {
             throttle = 0.4f;// Anti reverse lock thingy??
         }
-        
+
         if (drivetrain.gear == 0)
             drivetrain.throttle = Input.GetKey(KeyCode.UpArrow) ? throttle : 0f;
         else
@@ -209,18 +256,21 @@ public class CarController : MonoBehaviour {
 
         drivetrain.throttleInput = throttleInput;
 
-        if (Input.GetKeyDown(KeyCode.A)) {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
             lastShiftTime = Time.time;
             drivetrain.ShiftUp();
         }
 
-        if (Input.GetKeyDown(KeyCode.Z)) {
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
             lastShiftTime = Time.time;
             drivetrain.ShiftDown();
         }
 
         //play gear shift sound
-        if (gearShifted && gearShiftedFlag && drivetrain.gear != 1) {
+        if (gearShifted && gearShiftedFlag && drivetrain.gear != 1)
+        {
             GetComponent<SoundController>().playShiftUp();
             gearShifted = false;
             gearShiftedFlag = false;
@@ -232,41 +282,52 @@ public class CarController : MonoBehaviour {
             brake -= brake >= 0.1f ? 0.1f : 0f;
 
         // Apply inputs
-        foreach (Wheel w in wheels) {
-            w.brake = Input.GetKey(KeyCode.DownArrow) ? brake :  0;
+        foreach (Wheel w in wheels)
+        {
+            w.brake = Input.GetKey(KeyCode.DownArrow) ? brake : 0;
             w.handbrake = handbrake;
             w.steering = steering;
         }
 
         // Reset Car position and rotation in case it rolls over
-        if (Input.GetKeyDown(KeyCode.R)) {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
             transform.position = new Vector3(transform.position.x, transform.position.y + 2f, transform.position.z);
             transform.rotation = Quaternion.Euler(0, transform.localRotation.y, 0);
         }
 
 
         // Traction Control Toggle
-        if (Input.GetKeyDown(KeyCode.T)) {
+        if (Input.GetKeyDown(KeyCode.T))
+        {
 
-            if (tractionControl) {
+            if (tractionControl)
+            {
                 tractionControl = false;
-            } else {
+            }
+            else
+            {
                 tractionControl = true;
             }
         }
 
         // Anti-Brake Lock Toggle
-        if (Input.GetKeyDown(KeyCode.B)) {
-            if (absControl) {
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            if (absControl)
+            {
                 absControl = false;
-            } else {
+            }
+            else
+            {
                 absControl = true;
             }
         }
     }
 
     // Debug GUI. Disable when not needed.
-    void OnGUI() {
+    void OnGUI()
+    {
         GUI.Label(new Rect(0, 60, 100, 200), "km/h: " + GetComponent<Rigidbody>().velocity.magnitude * 3.6f);
         tractionControl = GUI.Toggle(new Rect(0, 80, 300, 20), tractionControl, "Traction Control (bypassed by shift key)");
     }

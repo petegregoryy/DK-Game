@@ -108,6 +108,13 @@ public class Drivetrain : MonoBehaviour
 
     void Update()
     {
+        //***********************
+        stats = new Car_Stats("Default");
+        engineInertia = stats._engineInertia;
+        engineRPMFriction = stats._engineRPMFriction;
+        differentialLockCoefficient = stats._differentialLockCoefficient;
+        //***********************
+
         float ratio = gearRatios[gear] * finalDriveRatio;
         float inertia = engineInertia * Sqr(ratio);
         float engineFrictionTorque = engineBaseFriction + rpm * engineRPMFriction;
