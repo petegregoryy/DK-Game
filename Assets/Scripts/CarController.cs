@@ -2,10 +2,12 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
 
-
 // This class is repsonsible for controlling inputs to the car.
 [RequireComponent(typeof(Drivetrain))]
 public class CarController : MonoBehaviour {
+
+    //Car_Stats stats = new Car_Stats();
+    //stats.SetStatsFromFile("Default");
 
     // Add all wheels of the car here, so brake and steering forces can be applied to them.
     public Wheel[] wheels;

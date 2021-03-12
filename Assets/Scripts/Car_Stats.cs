@@ -2,8 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Collections;
+using System.Text;
+using System.Xml;
+using System.IO;
 
-class Car_Stats : MonoBehaviour
+public class Car_Stats : MonoBehaviour
 {
     //Car contoler:
     [SerializeField]
@@ -29,11 +32,11 @@ class Car_Stats : MonoBehaviour
 
     //Drivetrain:
     [SerializeField]
-    private float __engineInertia { get; }//not sure. it does something.
+    private float __engineInertia { get; set; }//not sure. it does something.
     [SerializeField]
-    private float __engineRPMFriction { get; }//not sure. it does something.
+    private float __engineRPMFriction { get; set; }//not sure. it does something.
     [SerializeField]
-    private float __differentialLockCoefficient { get; }//not sure. it does something.
+    private float __differentialLockCoefficient { get; set; }//not sure. it does something.
 
     //Car contoler:
     [HideInInspector]
@@ -105,10 +108,10 @@ class Car_Stats : MonoBehaviour
         __engineRPMFriction = 0.2f;
         __differentialLockCoefficient = 0.1f;
     }
-    public Car_Stats(float inertiaFactor, float throttleTime, float throttleTimeTraction, 
-                float throttleRelaseTime, float throttleReleaseTimeTraction, float steerTime, 
-                float veloSteerTime, float steerReleaseTime,float veloSteerReleaseTime, 
-                float steerCorectionFactor, float engineInertia, float engineRPMFriction, 
+    public Car_Stats(float inertiaFactor, float throttleTime, float throttleTimeTraction,
+                float throttleRelaseTime, float throttleReleaseTimeTraction, float steerTime,
+                float veloSteerTime, float steerReleaseTime, float veloSteerReleaseTime,
+                float steerCorectionFactor, float engineInertia, float engineRPMFriction,
                 float differentialLockCoefficient)
     {
         //car controler:
@@ -147,13 +150,45 @@ class Car_Stats : MonoBehaviour
         __differentialLockCoefficient = differentialLockCoefficient;
     }
 
-    void SetStatsFromFile()//Because the thing is whiny, it needs to be used itemofcarstats.SetStatsFromFile(carIdentifier);
+    public void SetStatsFromFile(string carIdentifier)//Because the thing is whiny, it needs to be used itemofcarstats.SetStatsFromFile(carIdentifier);
     {
+        //load xml file
+        XmlDocument listOfCars = new XmlDocument();
+        listOfCars.Load("carstatfile.xml");
+        int x = 0;
+        foreach (XmlNode car in listOfCars)
+        {
 
+            //find car
+            if (car.ChildNodes.Item(x).Attributes["name"].Value == carIdentifier)
+            {
 
+                //set double-underscore variables to stats of the file
+
+                //car controler:
+                __inertiaFactor = float.Parse(car.ChildNodes.Item(x).Attributes["inertiaFactor"].Value);
+                __throttleTime = float.Parse(car.ChildNodes.Item(x).Attributes["throttleTime"].Value);
+                __throttleTimeTraction = float.Parse(car.ChildNodes.Item(x).Attributes["throttleTimeTraction"].Value);
+                __throttleRelaseTime = float.Parse(car.ChildNodes.Item(x).Attributes["throttleRelaseTime"].Value);
+                __throttleReleaseTimeTraction = float.Parse(car.ChildNodes.Item(x).Attributes["throttleReleaseTimeTraction"].Value);
+                __steerTime = float.Parse(car.ChildNodes.Item(x).Attributes["steerTime"].Value);
+                __veloSteerTime = float.Parse(car.ChildNodes.Item(x).Attributes["veloSteerTime"].Value);
+                __steerReleaseTime = float.Parse(car.ChildNodes.Item(x).Attributes["steerReleaseTime"].Value);
+                __veloSteerReleaseTime = float.Parse(car.ChildNodes.Item(x).Attributes["veloSteerReleaseTime"].Value);
+                __steerCorectionFactor = float.Parse(car.ChildNodes.Item(x).Attributes["steerCorectionFactor"].Value);
+                //Drivetrain:
+                __engineInertia = float.Parse(car.ChildNodes.Item(x).Attributes["engineInertia"].Value);
+                __engineRPMFriction = float.Parse(car.ChildNodes.Item(x).Attributes["engineRPMFriction"].Value);
+                __differentialLockCoefficient = float.Parse(car.ChildNodes.Item(x).Attributes["differentialLockCoefficient"].Value);
+
+                this.returnStatsToNormal();//sets the stats of single-underscore variables for us
+
+            }
+            x = x + 1;
+        }
     }
 
-    void returnStatsToNormal()
+    public void returnStatsToNormal()
     {
         //car controler:
         _inertiaFactor = __inertiaFactor;

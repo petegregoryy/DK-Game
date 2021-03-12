@@ -6,6 +6,8 @@ using System.Collections;
 // torque, and applying the torque to the wheels.
 public class Drivetrain : MonoBehaviour
 {
+    Car_Stats stats = new Car_Stats();
+    //stats.SetStatsFromFile("Default");
 
     // All the wheels the drivetrain should power
     public Wheel[] poweredWheels;
