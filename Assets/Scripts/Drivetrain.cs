@@ -110,6 +110,9 @@ public class Drivetrain : MonoBehaviour
     {
         //***********************
         stats = new Car_Stats("Default");
+        //updates to stats/ checks for powerups go here by adding to the single underscore values of variable stats.
+
+        //***********************
         engineInertia = stats._engineInertia;
         engineRPMFriction = stats._engineRPMFriction;
         differentialLockCoefficient = stats._differentialLockCoefficient;

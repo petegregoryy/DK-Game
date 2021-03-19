@@ -105,7 +105,9 @@ public class CarController : MonoBehaviour
     {
         //****************************
         stats = new Car_Stats("Default");
-        
+        //updates to stats/ checks for powerups go here by adding to the single underscore values of variable stats.
+
+        //***********************
         inertiaFactor = stats._inertiaFactor;
         throttleTime = stats._throttleTime;
         throttleReleaseTimeTraction = stats._throttleTimeTraction;
@@ -131,8 +133,10 @@ public class CarController : MonoBehaviour
     void Update()
     {
         //****************************
-        stats = new Car_Stats("Default");
+        //stats = new Car_Stats("Default");
+        //updates to stats/ checks for powerups go here by adding to the single underscore values of variable stats.
 
+        //***********************
         inertiaFactor = stats._inertiaFactor;
         throttleTime = stats._throttleTime;
         throttleReleaseTimeTraction = stats._throttleTimeTraction;
