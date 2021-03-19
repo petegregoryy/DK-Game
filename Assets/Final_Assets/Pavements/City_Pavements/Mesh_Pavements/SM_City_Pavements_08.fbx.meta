@@ -3,7 +3,17 @@ guid: 6f8056baf714c614a9a03603079ff12a
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wide_Pavement_Curb
+    second: {fileID: 2100000, guid: 92380cae774dc6a42951f148837dbb3f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wide_Pavement_Walkway
+    second: {fileID: 2100000, guid: d463c9de54785a746b47d94030e48c26, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

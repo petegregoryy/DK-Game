@@ -3,7 +3,27 @@ guid: da8e153f40a23a644864287d33fc58db
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Slim_Pavement_Curb
+    second: {fileID: 2100000, guid: dfb1cdd66d96c664a9091af9d2dad5e3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Slim_Pavement_Walkway
+    second: {fileID: 2100000, guid: ff0e03561825cab4ba78f00926f8df58, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: blinn35
+    second: {fileID: 2100000, guid: a6b1348239ab564438a4fc7fda3ff789, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: f67f30d3a2725c5449e6835b53ccf194, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

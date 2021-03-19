@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7835714550008251026}
   - component: {fileID: 1655044200836655449}
   - component: {fileID: 8497142840092896128}
+  - component: {fileID: 5508114476322729607}
   m_Layer: 0
   m_Name: Rearlights
   m_TagString: Untagged
@@ -79,6 +80,27 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5508114476322729607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185248133011278051}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  instanceMaterial: 1
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
 --- !u!1 &334294895172551388
 GameObject:
   m_ObjectHideFlags: 0
@@ -90,6 +112,7 @@ GameObject:
   - component: {fileID: 8090237482827478686}
   - component: {fileID: 7268188523987656784}
   - component: {fileID: 8029863416228205293}
+  - component: {fileID: 8737428917204655627}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -137,7 +160,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9cab9fb569a240f4388f805c35cf8dc1, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -158,6 +181,27 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &8737428917204655627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334294895172551388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: b91e9fa0a5e06bc4b85a2cc216c41324, type: 2}
+  instanceMaterial: 1
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
 --- !u!1 &461404877838989955
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,6 +213,7 @@ GameObject:
   - component: {fileID: 1579673244034558186}
   - component: {fileID: 2329986775726895725}
   - component: {fileID: 6330551128970906771}
+  - component: {fileID: 5935609011664844991}
   m_Layer: 0
   m_Name: Cooler
   m_TagString: Untagged
@@ -237,6 +282,27 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5935609011664844991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 461404877838989955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  instanceMaterial: 1
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
 --- !u!1 &568432476557504608
 GameObject:
   m_ObjectHideFlags: 0
@@ -248,6 +314,7 @@ GameObject:
   - component: {fileID: 7681915310810812382}
   - component: {fileID: 3020954391694326203}
   - component: {fileID: 8965997764476540345}
+  - component: {fileID: 1694065027334298582}
   m_Layer: 0
   m_Name: RRWheel
   m_TagString: Untagged
@@ -295,7 +362,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 317674f00cac2144fa501202a1512860, type: 2}
+  - {fileID: 2100000, guid: 896644c44dac894448f5fa345c7fb95c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -316,6 +383,27 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1694065027334298582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 568432476557504608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  instanceMaterial: 1
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
 --- !u!1 &900270506717920993
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +415,7 @@ GameObject:
   - component: {fileID: 9221133788165230821}
   - component: {fileID: 6576093276681349163}
   - component: {fileID: 1440826110446333907}
+  - component: {fileID: 4615785248297177627}
   m_Layer: 0
   m_Name: RLWheel
   m_TagString: Untagged
@@ -374,7 +463,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 317674f00cac2144fa501202a1512860, type: 2}
+  - {fileID: 2100000, guid: 896644c44dac894448f5fa345c7fb95c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -395,6 +484,27 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &4615785248297177627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 900270506717920993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  instanceMaterial: 1
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
 --- !u!1 &973943367439869879
 GameObject:
   m_ObjectHideFlags: 0
@@ -406,6 +516,8 @@ GameObject:
   - component: {fileID: 3592207464789285991}
   - component: {fileID: 1326696975749164692}
   - component: {fileID: 8530231231701986991}
+  - component: {fileID: 4636353886937849497}
+  - component: {fileID: 8855016574084601627}
   m_Layer: 0
   m_Name: RearBumper
   m_TagString: Untagged
@@ -453,7 +565,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9cab9fb569a240f4388f805c35cf8dc1, type: 2}
+  - {fileID: 2100000, guid: b91e9fa0a5e06bc4b85a2cc216c41324, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -474,6 +586,48 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &4636353886937849497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973943367439869879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: 2b940ded59386514e907e912767893dd, type: 2}
+  instanceMaterial: 1
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
+--- !u!114 &8855016574084601627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973943367439869879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: b91e9fa0a5e06bc4b85a2cc216c41324, type: 2}
+  instanceMaterial: 0
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
 --- !u!1 &1364690166219321676
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,6 +639,7 @@ GameObject:
   - component: {fileID: 941939581855131772}
   - component: {fileID: 248831189981372702}
   - component: {fileID: 3553270390705105469}
+  - component: {fileID: 2839742431159462558}
   m_Layer: 0
   m_Name: Bonnet
   m_TagString: Untagged
@@ -532,7 +687,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9cab9fb569a240f4388f805c35cf8dc1, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -553,6 +708,27 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &2839742431159462558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1364690166219321676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: b91e9fa0a5e06bc4b85a2cc216c41324, type: 2}
+  instanceMaterial: 1
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
 --- !u!1 &1759429030507146592
 GameObject:
   m_ObjectHideFlags: 0
@@ -618,6 +794,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3278323048615369227}
   - component: {fileID: 4924407866444529619}
+  - component: {fileID: 586458951777908461}
   - component: {fileID: 3965159802125526807}
   m_Layer: 0
   m_Name: Body
@@ -648,6 +825,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2052020246958912601}
   m_Mesh: {fileID: 2959467708922500008, guid: 76c620c1ee4c9434795b0ea788aab294, type: 3}
+--- !u!114 &586458951777908461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052020246958912601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: b91e9fa0a5e06bc4b85a2cc216c41324, type: 2}
+  instanceMaterial: 0
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
 --- !u!23 &3965159802125526807
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -666,7 +864,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9cab9fb569a240f4388f805c35cf8dc1, type: 2}
+  - {fileID: 2100000, guid: b91e9fa0a5e06bc4b85a2cc216c41324, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -698,6 +896,7 @@ GameObject:
   - component: {fileID: 899289851907977772}
   - component: {fileID: 12821398710925403}
   - component: {fileID: 1573515332176581759}
+  - component: {fileID: 4246297751221257611}
   m_Layer: 0
   m_Name: Headlights
   m_TagString: Untagged
@@ -766,6 +965,27 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &4246297751221257611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2333514588653421530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  instanceMaterial: 1
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
 --- !u!1 &2982663494746311024
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,6 +997,7 @@ GameObject:
   - component: {fileID: 3004110315433930670}
   - component: {fileID: 2518836133006935233}
   - component: {fileID: 2130952540951355662}
+  - component: {fileID: 4290707801877913772}
   m_Layer: 0
   m_Name: headlightcover
   m_TagString: Untagged
@@ -845,6 +1066,27 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &4290707801877913772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2982663494746311024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  instanceMaterial: 1
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
 --- !u!1 &3565576749621646871
 GameObject:
   m_ObjectHideFlags: 0
@@ -856,6 +1098,7 @@ GameObject:
   - component: {fileID: 36590073385028700}
   - component: {fileID: 178440139026588285}
   - component: {fileID: 5252158576766806042}
+  - component: {fileID: 6905954004575862419}
   m_Layer: 0
   m_Name: Splitter
   m_TagString: Untagged
@@ -903,7 +1146,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 788e9106f27bf9449a57dd71e6a423d1, type: 2}
+  - {fileID: 2100000, guid: b91e9fa0a5e06bc4b85a2cc216c41324, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -924,6 +1167,27 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &6905954004575862419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3565576749621646871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  instanceMaterial: 1
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
 --- !u!1 &4784895745241893764
 GameObject:
   m_ObjectHideFlags: 0
@@ -935,6 +1199,7 @@ GameObject:
   - component: {fileID: 3174735812186957472}
   - component: {fileID: 510649869698952604}
   - component: {fileID: 7971385648549947747}
+  - component: {fileID: 932898972074211296}
   m_Layer: 0
   m_Name: Windshield
   m_TagString: Untagged
@@ -982,7 +1247,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5da8510add9bb8b408c93b8058a2a1ad, type: 2}
+  - {fileID: 2100000, guid: f436ec59540ba1b43ac5740f8fc0fdad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1003,6 +1268,27 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &932898972074211296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4784895745241893764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: f436ec59540ba1b43ac5740f8fc0fdad, type: 2}
+  instanceMaterial: 0
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
 --- !u!1 &4941720454796725091
 GameObject:
   m_ObjectHideFlags: 0
@@ -1014,6 +1300,7 @@ GameObject:
   - component: {fileID: 5742569148324379418}
   - component: {fileID: 7730050639226367951}
   - component: {fileID: 1478177241210849643}
+  - component: {fileID: 4946222250720414252}
   m_Layer: 0
   m_Name: NumberPlateFront
   m_TagString: Untagged
@@ -1082,6 +1369,27 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &4946222250720414252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4941720454796725091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  instanceMaterial: 1
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
 --- !u!1 &4952417024995715749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1093,6 +1401,7 @@ GameObject:
   - component: {fileID: 2054131499003149988}
   - component: {fileID: 8517160833436422907}
   - component: {fileID: 1116848165266319603}
+  - component: {fileID: 8351637937453001150}
   m_Layer: 0
   m_Name: Window
   m_TagString: Untagged
@@ -1140,7 +1449,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5da8510add9bb8b408c93b8058a2a1ad, type: 2}
+  - {fileID: 2100000, guid: f436ec59540ba1b43ac5740f8fc0fdad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1161,6 +1470,27 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &8351637937453001150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4952417024995715749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: f436ec59540ba1b43ac5740f8fc0fdad, type: 2}
+  instanceMaterial: 0
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
 --- !u!1 &5173966026724389110
 GameObject:
   m_ObjectHideFlags: 0
@@ -1251,6 +1581,7 @@ GameObject:
   - component: {fileID: 6029893412395433840}
   - component: {fileID: 1130256464924609296}
   - component: {fileID: 2279193393542513740}
+  - component: {fileID: 8205116253597348154}
   m_Layer: 0
   m_Name: Mirrors
   m_TagString: Untagged
@@ -1319,6 +1650,27 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &8205116253597348154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5648574496653118424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  instanceMaterial: 1
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
 --- !u!1 &5783558742515476092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,6 +1682,7 @@ GameObject:
   - component: {fileID: 94382075953022721}
   - component: {fileID: 1713794514050050571}
   - component: {fileID: 2485527774736128519}
+  - component: {fileID: 2331759183720282234}
   m_Layer: 0
   m_Name: RearLightscover
   m_TagString: Untagged
@@ -1398,6 +1751,27 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &2331759183720282234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5783558742515476092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  instanceMaterial: 1
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
 --- !u!1 &6021340676097525775
 GameObject:
   m_ObjectHideFlags: 0
@@ -1409,6 +1783,8 @@ GameObject:
   - component: {fileID: 9065702136258279260}
   - component: {fileID: 7090653740679441897}
   - component: {fileID: 3364797109442741379}
+  - component: {fileID: 5733710757994924523}
+  - component: {fileID: 6009663663715119450}
   m_Layer: 0
   m_Name: RearFender
   m_TagString: Untagged
@@ -1456,7 +1832,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9cab9fb569a240f4388f805c35cf8dc1, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1477,6 +1853,48 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5733710757994924523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6021340676097525775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: b91e9fa0a5e06bc4b85a2cc216c41324, type: 2}
+  instanceMaterial: 1
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
+--- !u!114 &6009663663715119450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6021340676097525775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  instanceMaterial: 1
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
 --- !u!1 &6033248381984261190
 GameObject:
   m_ObjectHideFlags: 0
@@ -1488,6 +1906,8 @@ GameObject:
   - component: {fileID: 7332272553897893931}
   - component: {fileID: 5456307966723848594}
   - component: {fileID: 6734772499208300058}
+  - component: {fileID: 2740384554608547731}
+  - component: {fileID: 4957643539532517511}
   m_Layer: 0
   m_Name: Skirt
   m_TagString: Untagged
@@ -1535,7 +1955,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9cab9fb569a240f4388f805c35cf8dc1, type: 2}
+  - {fileID: 2100000, guid: b91e9fa0a5e06bc4b85a2cc216c41324, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1556,6 +1976,48 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &2740384554608547731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6033248381984261190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: b91e9fa0a5e06bc4b85a2cc216c41324, type: 2}
+  instanceMaterial: 0
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
+--- !u!114 &4957643539532517511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6033248381984261190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  instanceMaterial: 1
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
 --- !u!1 &6573029089067127661
 GameObject:
   m_ObjectHideFlags: 0
@@ -1567,6 +2029,7 @@ GameObject:
   - component: {fileID: 2521774196834458882}
   - component: {fileID: 2340200458760591697}
   - component: {fileID: 7372581536619385387}
+  - component: {fileID: 5171651943426593851}
   m_Layer: 0
   m_Name: HeadlightBack
   m_TagString: Untagged
@@ -1635,6 +2098,27 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5171651943426593851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6573029089067127661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  instanceMaterial: 1
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
 --- !u!1 &6657584063308788729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1646,6 +2130,7 @@ GameObject:
   - component: {fileID: 105405894228242058}
   - component: {fileID: 4299082947185499981}
   - component: {fileID: 8957690358147507459}
+  - component: {fileID: 2187753720559241299}
   m_Layer: 0
   m_Name: FLWheel
   m_TagString: Untagged
@@ -1693,7 +2178,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 317674f00cac2144fa501202a1512860, type: 2}
+  - {fileID: 2100000, guid: 896644c44dac894448f5fa345c7fb95c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1714,6 +2199,27 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &2187753720559241299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6657584063308788729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  instanceMaterial: 1
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
 --- !u!1 &7400355633466686830
 GameObject:
   m_ObjectHideFlags: 0
@@ -1725,6 +2231,8 @@ GameObject:
   - component: {fileID: 4150398234779661194}
   - component: {fileID: 1385281441362130460}
   - component: {fileID: 5183992065875683797}
+  - component: {fileID: 957451478050230642}
+  - component: {fileID: 9022747177436864123}
   m_Layer: 0
   m_Name: Undercarriage
   m_TagString: Untagged
@@ -1772,7 +2280,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5561349426305759274, guid: 76c620c1ee4c9434795b0ea788aab294, type: 3}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1793,6 +2301,48 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &957451478050230642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7400355633466686830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: c605fc6e7e17e8a4aae85bda4e898eff, type: 2}
+  instanceMaterial: 1
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
+--- !u!114 &9022747177436864123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7400355633466686830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  instanceMaterial: 1
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
 --- !u!1 &7453748140670605541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1804,6 +2354,7 @@ GameObject:
   - component: {fileID: 464027404316229254}
   - component: {fileID: 9054462124463368118}
   - component: {fileID: 6684496918358343941}
+  - component: {fileID: 5995279954279090405}
   m_Layer: 0
   m_Name: Rear_Window
   m_TagString: Untagged
@@ -1851,7 +2402,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5da8510add9bb8b408c93b8058a2a1ad, type: 2}
+  - {fileID: 2100000, guid: f436ec59540ba1b43ac5740f8fc0fdad, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1872,6 +2423,27 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5995279954279090405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7453748140670605541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 2100000, guid: f436ec59540ba1b43ac5740f8fc0fdad, type: 2}
+  instanceMaterial: 0
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
 --- !u!1 &8484319788053201275
 GameObject:
   m_ObjectHideFlags: 0
@@ -1883,6 +2455,7 @@ GameObject:
   - component: {fileID: 4250268257759052680}
   - component: {fileID: 8309394125271377209}
   - component: {fileID: 7740242711174881034}
+  - component: {fileID: 2223640904258865805}
   m_Layer: 0
   m_Name: FRWheel
   m_TagString: Untagged
@@ -1930,7 +2503,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 317674f00cac2144fa501202a1512860, type: 2}
+  - {fileID: 2100000, guid: 896644c44dac894448f5fa345c7fb95c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1951,6 +2524,27 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &2223640904258865805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8484319788053201275}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  instanceMaterial: 1
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
 --- !u!1 &8498402383146493420
 GameObject:
   m_ObjectHideFlags: 0
@@ -1962,6 +2556,7 @@ GameObject:
   - component: {fileID: 6170819364695825250}
   - component: {fileID: 1208350215426968187}
   - component: {fileID: 2081534574095494072}
+  - component: {fileID: 8488041079123258744}
   m_Layer: 0
   m_Name: NumberPlatRear
   m_TagString: Untagged
@@ -2030,3 +2625,24 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &8488041079123258744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8498402383146493420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de94e9f46f3df324fb2cb02b14c766a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  material: {fileID: 0}
+  instanceMaterial: 1
+  meshCenter: {x: 0, y: 0, z: 0}
+  maxLights: 6
+  raycast: 1
+  raycastMask:
+    serializedVersion: 2
+    m_Bits: 0
+  raycastFadeSpeed: 10
