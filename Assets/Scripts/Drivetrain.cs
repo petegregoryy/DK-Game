@@ -6,8 +6,7 @@ using System.Collections;
 // torque, and applying the torque to the wheels.
 public class Drivetrain : MonoBehaviour
 {
-    Car_Stats stats = new Car_Stats();
-    //stats.SetStatsFromFile("Default");
+    public Car_Stats stats = new Car_Stats("Default");
 
     // All the wheels the drivetrain should power
     public Wheel[] poweredWheels;
@@ -109,6 +108,13 @@ public class Drivetrain : MonoBehaviour
 
     void Update()
     {
+        //***********************
+        stats = new Car_Stats("Default");
+        engineInertia = stats._engineInertia;
+        engineRPMFriction = stats._engineRPMFriction;
+        differentialLockCoefficient = stats._differentialLockCoefficient;
+        //***********************
+
         float ratio = gearRatios[gear] * finalDriveRatio;
         float inertia = engineInertia * Sqr(ratio);
         float engineFrictionTorque = engineBaseFriction + rpm * engineRPMFriction;

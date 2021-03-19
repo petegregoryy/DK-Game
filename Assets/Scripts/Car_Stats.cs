@@ -40,37 +40,37 @@ public class Car_Stats : MonoBehaviour
 
     //Car contoler:
     [HideInInspector]
-    public float _inertiaFactor; // Will be modified per car: DRIFT
+    public float _inertiaFactor { get; set; } // Will be modified per car: DRIFT
 
     [HideInInspector]
-    public float _throttleTime; // ACCELERATION
+    public float _throttleTime { get; set; } // ACCELERATION
     [HideInInspector]
-    public float _throttleTimeTraction; //doenst seem to do anything that can be felt.
+    public float _throttleTimeTraction { get; set; } //doenst seem to do anything that can be felt.
     [HideInInspector]
-    public float _throttleRelaseTime; //doenst seem to do anything that can be felt.
+    public float _throttleRelaseTime { get; set; } //doenst seem to do anything that can be felt.
     [HideInInspector]
-    public float _throttleReleaseTimeTraction; //doenst seem to do anything that can be felt.
+    public float _throttleReleaseTimeTraction { get; set; } //doenst seem to do anything that can be felt.
     [HideInInspector]
-    public float _steerTime; //doenst seem to do anything that can be felt.
+    public float _steerTime { get; set; } //doenst seem to do anything that can be felt.
     [HideInInspector]
-    public float _veloSteerTime; //handling?
+    public float _veloSteerTime { get; set; } //handling?
 
     [HideInInspector]
     public float _steerReleaseTime; //doenst seem to do anything that can be felt.
     [HideInInspector]
-    public float _veloSteerReleaseTime;
+    public float _veloSteerReleaseTime { get; set; }
     [HideInInspector]
-    public float _steerCorectionFactor;//handling?
+    public float _steerCorectionFactor { get; set; }//handling?
 
 
     //Drivetrain:
 
     [HideInInspector]
-    public float _engineInertia;//not sure. it does something.
+    public float _engineInertia { get; set; }//not sure. it does something.
     [HideInInspector]
-    public float _engineRPMFriction;//not sure. it does something.
+    public float _engineRPMFriction { get; set; }//not sure. it does something.
     [HideInInspector]
-    public float _differentialLockCoefficient;//not sure. it does something.
+    public float _differentialLockCoefficient { get; set; }//not sure. it does something.
 
     public Car_Stats()
     {
@@ -148,6 +148,11 @@ public class Car_Stats : MonoBehaviour
         __engineInertia = engineInertia;
         __engineRPMFriction = engineRPMFriction;
         __differentialLockCoefficient = differentialLockCoefficient;
+    }
+
+    public Car_Stats(string carIdentifier)
+    {
+        SetStatsFromFile(carIdentifier);
     }
 
     public void SetStatsFromFile(string carIdentifier)//Because the thing is whiny, it needs to be used itemofcarstats.SetStatsFromFile(carIdentifier);
