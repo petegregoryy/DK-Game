@@ -128,7 +128,7 @@ public class CarController : MonoBehaviour
         
     }
 
-    void FixedUpdate()
+    void Update()
     {
         //****************************
         stats = new Car_Stats("Default");
