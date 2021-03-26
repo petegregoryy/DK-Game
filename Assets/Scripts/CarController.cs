@@ -1,11 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-
+using TMPro;
 // This class is repsonsible for controlling inputs to the car.
 [RequireComponent(typeof(Drivetrain))]
 public class CarController : MonoBehaviour
 {
+
+    //public TextMeshProUGUI carNameText = CarSelection.carNameText; 
     public Car_Stats stats = new Car_Stats("Default");
 
     // Add all wheels of the car here, so brake and steering forces can be applied to them.
