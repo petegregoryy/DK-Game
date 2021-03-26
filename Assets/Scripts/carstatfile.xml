@@ -1,10 +1,10 @@
 <cars>
-<car name ="Default" inertiaFactor="1.5" throttleTime = "1.0" throttleTimeTraction = "10.0" throttleRelaseTime = "0.5" throttleReleaseTimeTraction = "0.1" steerTime = "1.2" veloSteerTime = "0.1" steerReleaseTime = "0.6" veloSteerReleaseTime = "0" steerCorectionFactor = "4.0" engineInertia = "0.3" engineRPMFriction = "0.2" differentialLockCoefficient = "0.1"/>
+<car name ="Default" inertiaFactor="1.5" throttleTime = "1.0" throttleTimeTraction = "10.0" throttleRelaseTime = "0.5" throttleReleaseTimeTraction = "0.1" steerTime = "1.2" veloSteerTime = "0.1" steerReleaseTime = "0.6" veloSteerReleaseTime = "0" steerCorectionFactor = "4.0" engineInertia = "0.3" engineRPMFriction = "0.02" differentialLockCoefficient = "0.1"/>
 
-<car name ="Eclipse" inertiaFactor="1.5" throttleTime = "1.0" throttleTimeTraction = "10.0" throttleRelaseTime = "0.5" throttleReleaseTimeTraction = "0.1" steerTime = "1.2" veloSteerTime = "0.1" steerReleaseTime = "0.f" veloSteerReleaseTime = "0f" steerCorectionFactor = "4.0" engineInertia = "0.3" engineRPMFriction = "0.2" differentialLockCoefficient = "0.1"/>
+<car name ="Eclipse" inertiaFactor="1.5" throttleTime = "1.0" throttleTimeTraction = "10.0" throttleRelaseTime = "0.5" throttleReleaseTimeTraction = "0.1" steerTime = "1.2" veloSteerTime = "0.1" steerReleaseTime = "0.6" veloSteerReleaseTime = "0" steerCorectionFactor = "4.0" engineInertia = "0.3" engineRPMFriction = "0.02" differentialLockCoefficient = "0.1"/>
 
-<car name ="RX7" inertiaFactor="1.0" throttleTime = "1.0" throttleTimeTraction = "10.0" throttleRelaseTime = "0.5" throttleReleaseTimeTraction = "0.1" steerTime = "1.2" veloSteerTime = "0.1" steerReleaseTime = "0.6" veloSteerReleaseTime = "0" steerCorectionFactor = "4.0" engineInertia = "0.3" engineRPMFriction = "0.2" differentialLockCoefficient = "0.1"/>
+<car name ="RX7" inertiaFactor="1.0" throttleTime = "1.0" throttleTimeTraction = "10.0" throttleRelaseTime = "0.5" throttleReleaseTimeTraction = "0.1" steerTime = "1.2" veloSteerTime = "0.1" steerReleaseTime = "0.6" veloSteerReleaseTime = "0" steerCorectionFactor = "4.0" engineInertia = "0.3" engineRPMFriction = "0.02" differentialLockCoefficient = "0.1"/>
 
-<car name ="S2000" inertiaFactor="1.75" throttleTime = "1.0" throttleTimeTraction = "10.0" throttleRelaseTime = "0.5" throttleReleaseTimeTraction = "0.1" steerTime = "1.2" veloSteerTime = "0.1" steerReleaseTime = "0.6" veloSteerReleaseTime = "0" steerCorectionFactor = "4.0" engineInertia = "0.3" engineRPMFriction = "0.2" differentialLockCoefficient = "0.1"/>
+<car name ="S2000" inertiaFactor="1.75" throttleTime = "1.0" throttleTimeTraction = "10.0" throttleRelaseTime = "0.5" throttleReleaseTimeTraction = "0.1" steerTime = "1.2" veloSteerTime = "0.1" steerReleaseTime = "0.6" veloSteerReleaseTime = "0" steerCorectionFactor = "4.0" engineInertia = "0.3" engineRPMFriction = "0.02" differentialLockCoefficient = "0.1"/>
 
 </cars>
