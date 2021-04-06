@@ -40,6 +40,8 @@ public class DriftCalculator : MonoBehaviour
     float multiplier = 1;
     float multTimer = 0;
 
+    float leeway = 60;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -71,6 +73,7 @@ public class DriftCalculator : MonoBehaviour
 
         if (angle > 10.0f && angle < 90.0f)
         {
+            leeway = 60;
             angleText.text = "Dorifto Angle: " + intAngle.ToString();
             if (moving.magnitude > 10)
             {
@@ -87,7 +90,7 @@ public class DriftCalculator : MonoBehaviour
             }
 
         }
-        else if(angle > 90.0f)
+        else if (angle > 90.0f)
         {
             pointStore.BANK_POINTS();
             angleText.text = "Dorifto Angle: Spinout";
@@ -116,28 +119,33 @@ public class DriftCalculator : MonoBehaviour
         }
         else
         {
-            foreach (ParticleSystem partSys in wheelParticles)
+            if (leeway > 0)//***NEW
+            { leeway = leeway - 1; }//***NEW
+            else//***NEW
             {
-                if (partSys.isPlaying)
+                foreach (ParticleSystem partSys in wheelParticles)
                 {
-                    partSys.Stop();
+                    if (partSys.isPlaying)
+                    {
+                        partSys.Stop();
+                    }
                 }
+                pointStore.BANK_POINTS();
+                angleText.text = "Dorifto Angle: Straight";
+                //score += tempScore * multiplier;
+
+                pointStore.Set_drifting_multiplier(1);
+                pointStore.Set_temp_points(0);
+
+                driftTimer = 0;
+                //multiplier = 1;
+                //tempScore = 0;
+                scoreText.text = pointStore.Get_total_score().ToString().PadLeft(15, '0');
+                tempScoreText.enabled = false;
+                multText.enabled = false;
+                tempBack.enabled = false;
+                multBack.enabled = false;
             }
-            pointStore.BANK_POINTS();
-            angleText.text = "Dorifto Angle: Straight";
-            //score += tempScore * multiplier;
-
-            pointStore.Set_drifting_multiplier(1);
-            pointStore.Set_temp_points(0);
-
-            driftTimer = 0;
-            //multiplier = 1;
-            //tempScore = 0;
-            scoreText.text = pointStore.Get_total_score().ToString().PadLeft(15, '0');
-            tempScoreText.enabled = false;
-            multText.enabled = false;
-            tempBack.enabled = false;
-            multBack.enabled = false;
         }
     }
 
