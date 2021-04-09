@@ -112,6 +112,13 @@ public class Drivetrain : MonoBehaviour
         stats = new Car_Stats("Default");
         //updates to stats/ checks for powerups go here by adding to the single underscore values of variable stats.
 
+        /*Debug.Log("engineInertia:");
+        Debug.Log(stats._engineInertia);
+        Debug.Log("engineRPMFriction:");
+        Debug.Log(stats._engineRPMFriction);
+        Debug.Log("differentialLockCoefficient:");
+        Debug.Log(stats._differentialLockCoefficient);*/
+
         //***********************
         engineInertia = stats._engineInertia;
         engineRPMFriction = stats._engineRPMFriction;

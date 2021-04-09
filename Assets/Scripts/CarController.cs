@@ -106,7 +106,8 @@ public class CarController : MonoBehaviour
     void Start()
     {
         //****************************
-        stats = new Car_Stats("Default");
+        string carName = "Default";//will get the car type
+        stats = new Car_Stats(carName);
         //updates to stats/ checks for powerups go here by adding to the single underscore values of variable stats.
 
         //***********************
