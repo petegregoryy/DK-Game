@@ -195,6 +195,7 @@ public class CarController : MonoBehaviour
         {
             accelKey = Input.GetKey(KeyCode.S);// DownArrow);
             brakeKey = Input.GetKey(KeyCode.W);// UpArrow);
+            revKey = Input.GetKey(KeyCode.X);
         }
 
         if (Input.GetKey(KeyCode.LeftShift))
@@ -248,6 +249,23 @@ public class CarController : MonoBehaviour
 
         // Handbrake
         handbrake = (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.JoystickButton2)) ? 1f : 0f;
+
+        //***************************Start of reverse
+        if(revKey)
+        {
+            // does not work
+            if (drivetrain.slipRatio < 0.10f)
+                throttle -= Time.deltaTime / throttleTime;
+            else if (!tractionControl)
+                throttle -= Time.deltaTime / throttleTimeTraction;
+            else
+                throttle += Time.deltaTime / throttleReleaseTime;
+
+            if (throttleInput < 0)
+                throttleInput = 0;
+            throttleInput -= Time.deltaTime / throttleTime;
+        }
+        //***************************End of reverse
 
         // Gear shifting
         float shiftThrottleFactor = Mathf.Clamp01((Time.time - lastShiftTime) / shiftSpeed);
