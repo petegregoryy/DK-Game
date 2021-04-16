@@ -162,9 +162,9 @@ public class CarController : MonoBehaviour
             optimalSteering = 0;
 
         float steerInput = 0;
-        if (Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.A))//LeftArrow))
             steerInput = -1;
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D))//RightArrow))
             steerInput = 1;
 
         if (steerInput < steering)
@@ -187,13 +187,14 @@ public class CarController : MonoBehaviour
         }
 
 
-        bool accelKey = Input.GetKey(KeyCode.UpArrow);
-        bool brakeKey = Input.GetKey(KeyCode.DownArrow);
+        bool accelKey = Input.GetKey(KeyCode.W);//UpArrow);
+        bool brakeKey = Input.GetKey(KeyCode.S);//DownArrow);
+        bool revKey = Input.GetKey(KeyCode.X);
 
         if (drivetrain.automatic && drivetrain.gear == 0)
         {
-            accelKey = Input.GetKey(KeyCode.DownArrow);
-            brakeKey = Input.GetKey(KeyCode.UpArrow);
+            accelKey = Input.GetKey(KeyCode.S);// DownArrow);
+            brakeKey = Input.GetKey(KeyCode.W);// UpArrow);
         }
 
         if (Input.GetKey(KeyCode.LeftShift))
@@ -251,19 +252,19 @@ public class CarController : MonoBehaviour
         // Gear shifting
         float shiftThrottleFactor = Mathf.Clamp01((Time.time - lastShiftTime) / shiftSpeed);
 
-        if (drivetrain.gear == 0 && Input.GetKey(KeyCode.UpArrow))
+        if (drivetrain.gear == 0 && Input.GetKey(KeyCode.W))//UpArrow))
         {
             throttle = 0.4f;// Anti reverse lock thingy??
         }
 
         if (drivetrain.gear == 0)
-            drivetrain.throttle = Input.GetKey(KeyCode.UpArrow) ? throttle : 0f;
+            drivetrain.throttle = Input.GetKey(KeyCode.W) ? throttle : 0f;
         else
-            drivetrain.throttle = Input.GetKey(KeyCode.UpArrow) ? (tractionControl ? throttle : 1) * shiftThrottleFactor : 0f;
+            drivetrain.throttle = Input.GetKey(KeyCode.W) ? (tractionControl ? throttle : 1) * shiftThrottleFactor : 0f;
 
         drivetrain.throttleInput = throttleInput;
 
-        if (Input.GetKeyDown(KeyCode.A))
+        if (Input.GetKeyDown(KeyCode.F))
         {
             lastShiftTime = Time.time;
             drivetrain.ShiftUp();
@@ -291,7 +292,7 @@ public class CarController : MonoBehaviour
         // Apply inputs
         foreach (Wheel w in wheels)
         {
-            w.brake = Input.GetKey(KeyCode.DownArrow) ? brake : 0;
+            w.brake = Input.GetKey(KeyCode.S) ? brake : 0;
             w.handbrake = handbrake;
             w.steering = steering;
         }
