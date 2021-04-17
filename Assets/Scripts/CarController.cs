@@ -9,6 +9,7 @@ public class CarController : MonoBehaviour
 
     //public TextMeshProUGUI carNameText = CarSelection.carNameText; 
     public Car_Stats stats = new Car_Stats("Default");
+    string _carName = "Default";//replace default by whatever you need to get the variables in.&&&&&&&&&&&&&
 
     // Add all wheels of the car here, so brake and steering forces can be applied to them.
     public Wheel[] wheels;
@@ -106,7 +107,7 @@ public class CarController : MonoBehaviour
     void Start()
     {
         //****************************
-        string carName = "Default";//will get the car type
+       _carName = "Default";//will get the car type &&&&&&&&&&&&&
         stats = new Car_Stats(carName);
         //updates to stats/ checks for powerups go here by adding to the single underscore values of variable stats.
 

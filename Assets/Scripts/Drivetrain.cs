@@ -7,6 +7,7 @@ using System.Collections;
 public class Drivetrain : MonoBehaviour
 {
     public Car_Stats stats = new Car_Stats("Default");
+    string _carName = "Default";//replace default by whatever you need to get the variables in.&&&&&&&&&&&&&
 
     // All the wheels the drivetrain should power
     public Wheel[] poweredWheels;
@@ -109,6 +110,7 @@ public class Drivetrain : MonoBehaviour
     void Update()
     {
         //***********************
+        _carName = "Default";//will get the car type &&&&&&&&&&&&&
         stats = new Car_Stats("Default");
         //updates to stats/ checks for powerups go here by adding to the single underscore values of variable stats.
 
