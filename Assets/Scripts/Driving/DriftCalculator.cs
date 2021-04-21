@@ -178,8 +178,8 @@ public class DriftCalculator : MonoBehaviour
     }
     void DriftController()
     {
-        bool LeftInput = Input.GetKey(KeyCode.LeftArrow);
-        bool RightInput = Input.GetKey(KeyCode.RightArrow);
+        bool LeftInput = Input.GetKey(KeyCode.A);
+        bool RightInput = Input.GetKey(KeyCode.D);
         float turn = 15.0f;
         float torque = 500.0f;
 
