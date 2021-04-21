@@ -159,7 +159,7 @@ public class Car_Stats : MonoBehaviour
     {
         //load xml file
         XmlDocument listOfCars = new XmlDocument();
-        listOfCars.Load("carstatfile.xml");
+        listOfCars.Load("Assets\\Scripts\\carstatfile.xml");
         int x = 0;
         foreach (XmlNode car in listOfCars)
         {
