@@ -223,13 +223,13 @@ public class CarController : MonoBehaviour
         {
             // Hold X and W to reverse. Needs fixes so it doesnt lock player in reverse.
             if (drivetrain.slipRatio < 0.10f)
-                throttle -= Time.deltaTime / throttleTime;
+                throttle -= (float)0.5 * (float)Time.deltaTime / throttleTime;
             else if (!tractionControl)
-                throttle -= Time.deltaTime / throttleTimeTraction;
+                throttle -= (float)0.5 * (float)Time.deltaTime / throttleTimeTraction;
             else
                 throttle += (float)0.5 * (float)(Time.deltaTime / throttleReleaseTime);
 
-            throttleInput -= Time.deltaTime / throttleTime;
+            throttleInput -= (float)0.5 * (float)Time.deltaTime / throttleTime;
 
 
         }
