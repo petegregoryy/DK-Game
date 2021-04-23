@@ -218,16 +218,8 @@ public class CarController : MonoBehaviour
                 throttleInput = 0;
             throttleInput += Time.deltaTime / throttleTime;
         }
-        else
-        {
-            if (drivetrain.slipRatio < 0.2f)
-                throttle -= Time.deltaTime / throttleReleaseTime;
-            else
-                throttle -= Time.deltaTime / throttleReleaseTimeTraction;
-        }
-
         //***************************Start of reverse
-        if (revKey)
+        else if (revKey)
         {
             // Hold X and W to reverse. Needs fixes so it doesnt lock player in reverse.
             if (drivetrain.slipRatio < 0.10f)
@@ -242,6 +234,13 @@ public class CarController : MonoBehaviour
 
         }
         //***************************End of reverse
+        else
+        {
+            if (drivetrain.slipRatio < 0.2f)
+                throttle -= Time.deltaTime / throttleReleaseTime;
+            else
+                throttle -= Time.deltaTime / throttleReleaseTimeTraction;
+        }
 
         throttle = Mathf.Clamp01(throttle);
 
