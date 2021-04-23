@@ -111,7 +111,7 @@ public class Drivetrain : MonoBehaviour
     {
         //***********************
         _carName = "Default";//will get the car type &&&&&&&&&&&&&
-        stats = new Car_Stats("Default");
+        stats = new Car_Stats(_carName);
         //updates to stats/ checks for powerups go here by adding to the single underscore values of variable stats.
 
         /*Debug.Log("engineInertia:");

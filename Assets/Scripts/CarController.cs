@@ -226,6 +226,23 @@ public class CarController : MonoBehaviour
                 throttle -= Time.deltaTime / throttleReleaseTimeTraction;
         }
 
+        //***************************Start of reverse
+        if (revKey)
+        {
+            // Hold X and W to reverse. Needs fixes so it doesnt lock player in reverse.
+            if (drivetrain.slipRatio < 0.10f)
+                throttle -= Time.deltaTime / throttleTime;
+            else if (!tractionControl)
+                throttle -= Time.deltaTime / throttleTimeTraction;
+            else
+                throttle += (float)0.5 * (float)(Time.deltaTime / throttleReleaseTime);
+
+            throttleInput -= Time.deltaTime / throttleTime;
+
+
+        }
+        //***************************End of reverse
+
         throttle = Mathf.Clamp01(throttle);
 
         if (brakeKey)
@@ -250,23 +267,6 @@ public class CarController : MonoBehaviour
 
         // Handbrake
         handbrake = (Input.GetKey(KeyCode.Space) || Input.GetKey(KeyCode.JoystickButton2)) ? 1f : 0f;
-
-        //***************************Start of reverse
-        if(revKey)
-        {
-            // does not work
-            if (drivetrain.slipRatio < 0.10f)
-                throttle -= Time.deltaTime / throttleTime;
-            else if (!tractionControl)
-                throttle -= Time.deltaTime / throttleTimeTraction;
-            else
-                throttle += Time.deltaTime / throttleReleaseTime;
-
-            throttleInput -= Time.deltaTime / throttleTime;
-
-            
-        }
-        //***************************End of reverse
 
         // Gear shifting
         float shiftThrottleFactor = Mathf.Clamp01((Time.time - lastShiftTime) / shiftSpeed);
