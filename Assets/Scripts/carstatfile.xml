@@ -7,4 +7,6 @@
 
 <car name ="S2000" inertiaFactor="1.75" throttleTime = "1.0" throttleTimeTraction = "10.0" throttleRelaseTime = "0.5" throttleReleaseTimeTraction = "0.1" steerTime = "1.2" veloSteerTime = "0.1" steerReleaseTime = "0.6" veloSteerReleaseTime = "0" steerCorectionFactor = "4.0" engineInertia = "0.3" engineRPMFriction = "0.02" differentialLockCoefficient = "0.1"/>
 
+<car name ="P50" inertiaFactor="2" throttleTime = "1.0" throttleTimeTraction = "15.0" throttleRelaseTime = "0.8" throttleReleaseTimeTraction = "0.2" steerTime = "1.1" veloSteerTime = "0.2" steerReleaseTime = "0.4" veloSteerReleaseTime = "0" steerCorectionFactor = "4.0" engineInertia = "0.4" engineRPMFriction = "0.04" differentialLockCoefficient = "0.15"/>
+
 </cars>
