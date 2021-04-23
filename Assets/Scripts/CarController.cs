@@ -262,9 +262,9 @@ public class CarController : MonoBehaviour
             else
                 throttle += Time.deltaTime / throttleReleaseTime;
 
-            if (throttleInput < 0)
-                throttleInput = 0;
             throttleInput -= Time.deltaTime / throttleTime;
+
+            
         }
         //***************************End of reverse
 
